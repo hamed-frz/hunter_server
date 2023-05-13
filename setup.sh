@@ -175,8 +175,10 @@ _nginx_config(){
   echo -e "+ Nginx and APIs is already installed. now this domains should be available.\n"${NC}
   echo -e "${RED}*** https://${__DOMAIN__} ***"${NC}
   echo -e "${RED}*** https://bxx.${__DOMAIN__} ***"${NC}
-  echo -e "${RED}*** https://ssrf.${__DOMAIN__} ***"${NC}
-
+  echo -e "${RED}*** https://ssrf.${__DOMAIN__} ***\n"${NC}
+  echo -e "${RED}*** BXSS API: https://bxx.${__DOMAIN__}/reqBXX ***"${NC}
+  echo -e "${RED}*** SSRF API: https://ssrf.${__DOMAIN__}/reqSSRF ***"${NC}
+  
   echo -e "${YELLOW}* You can change your domains with change html files in ./nginx/html"${NC}
   #alias sqlmap="python3 tools/sqlmap.py"
 }
