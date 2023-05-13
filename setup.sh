@@ -15,13 +15,11 @@ WHITE="\033[0;37m"
 
 
 _install_packages(){
-  #server config
   echo -e "${YELLOW}! Updating and installing linux packages."${NC}
   apt update &> /dev/null
   apt install vim curl zsh git net-tools tmux build-essential make python3-apt python3-distutils libssl-dev curl zsh git vim jq -y &> /dev/null
   curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py; python3 get-pip.py &> /dev/null
 
-  #exit
   echo -e "${YELLOW}! Installing Docker."
   sudo apt install \
       ca-certificates \
@@ -42,7 +40,7 @@ _install_packages(){
   echo -e "${GREEN}+ packages installing is finished."${NC}
 }
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 _install_go(){
   mkdir tools
@@ -86,7 +84,7 @@ _install_tools(){
   echo -e "+ Installing is finished."${NC}
 }
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 _install_bind(){
 
@@ -126,7 +124,7 @@ EOF
 
 }
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 _get_ssl(){
   #configuration nginx
@@ -183,7 +181,7 @@ _nginx_config(){
   #alias sqlmap="python3 tools/sqlmap.py"
 }
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 _install_zsh(){
   echo -e "${RED}"
@@ -220,7 +218,7 @@ else
   echo -e "${RED}+ go is already installed in your server so ignore to install it."${NC}
 fi
 
-#Installing
+
 echo -e "${YELLOW}! Installing tools for hunting, please wait for it...."${NC}
 _install_tools
 
