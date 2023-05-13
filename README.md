@@ -8,4 +8,4 @@ chmod +x setup.sh
 ./setup.sh
 ```
 # thank you
-[https://voorivex.academ/](https://github.com/Voorivex/OOB-Server)
+[Voorivex](https://github.com/Voorivex/OOB-Server)
