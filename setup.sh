@@ -186,8 +186,9 @@ _nginx_config(){
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 _install_zsh(){
-
-  read -p 'I want to Install zsh, you should be just type "exit" after the installing zsh finished and zsh bash enviroment is showing for you. are you understasnd?(yes) ' __check__
+  echo -e "${RED}"
+  read -p 'Installing zsh, you should be type "exit" after the install zsh finished.(ok?) ' __check__
+  echo -e "${nc}"
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   echo "export PATH=\$PATH:/usr/local/go/bin" >> /root/.zshrc
   echo "export PATH=\$PATH:/root/go/bin/" >> /root/.zshrc
