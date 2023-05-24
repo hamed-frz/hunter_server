@@ -80,6 +80,10 @@ _install_tools(){
   echo -e "+ anew installed."${NC}
   go install github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest &> /dev/null
   echo -e "+ nuclei installed."${NC}
+  go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+  echo -e "+ naabu installed."${NC}
+  go install github.com/OJ/gobuster/v3@latest
+  echo -e "+ gobuster installed."${NC}
 
   echo -e "+ Installing is finished."${NC}
 }
