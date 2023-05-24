@@ -17,7 +17,7 @@ WHITE="\033[0;37m"
 _install_packages(){
   echo -e "${YELLOW}! Updating and installing linux packages."${NC}
   apt update &> /dev/null
-  apt install vim curl zsh git net-tools tmux build-essential make python3-apt python3-distutils libssl-dev curl zsh git vim jq -y &> /dev/null
+  apt install vim curl zsh git net-tools tmux build-essential make python3-apt python3-distutils libpcap-dev libssl-dev curl zsh git vim jq -y &> /dev/null
   curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py; python3 get-pip.py &> /dev/null
 
   echo -e "${YELLOW}! Installing Docker."
