@@ -55,7 +55,11 @@ _install_go(){
   source /root/.bashrc
 }
 
-_install_tools(){      
+_install_tools(){
+  pip3 install dnsgen
+  echo -e "+ dnsgen installed."${NC}
+  pip3 install py-altdns==1.0.2
+  echo -e "+ altdns installed."${NC}
   go install github.com/projectdiscovery/notify/cmd/notify@latest &> /dev/null
   echo -e "+ notify installed."${NC}
   go install github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest &> /dev/null
