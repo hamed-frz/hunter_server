@@ -88,7 +88,9 @@ _install_tools(){
   echo -e "+ naabu installed."${NC}
   go install github.com/OJ/gobuster/v3@latest
   echo -e "+ gobuster installed."${NC}
-
+  go install github.com/tomnomnom/waybackurls@latest
+  echo -e "+ waybackurls installed."${NC}
+  
   echo -e "+ Installing is finished."${NC}
 }
 
