@@ -90,6 +90,8 @@ _install_tools(){
   echo -e "+ gobuster installed."${NC}
   go install github.com/tomnomnom/waybackurls@latest
   echo -e "+ waybackurls installed."${NC}
+  go install github.com/ImAyrix/cut-cdn@latest
+  echo -e "+ cut-cdn installed."${NC}
   
   echo -e "+ Installing is finished."${NC}
 }
