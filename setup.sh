@@ -70,8 +70,8 @@ _install_tools(){
   echo -e "+ unfurl installed."${NC}
   go install github.com/projectdiscovery/httpx/cmd/httpx@latest &> /dev/null
   echo -e "+ httpx installed."${NC}
-  go install github.com/bp0lr/gauplus@latest &> /dev/null
-  echo -e "+ gauplus installed."${NC}
+  go install github.com/lc/gau/v2/cmd/gau@latest &> /dev/null
+  echo -e "+ gau installed."${NC}
   go install github.com/projectdiscovery/katana/cmd/katana@latest &> /dev/null
   echo -e "+ katana installed."${NC}
   go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest &> /dev/null
