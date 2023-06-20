@@ -9,3 +9,4 @@ chmod +x setup.sh
 ```
 # thank you
 [Voorivex](https://github.com/Voorivex/OOB-Server)
+[MamadHAM](https://github.com/MamadHAM)
