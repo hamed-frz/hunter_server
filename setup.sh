@@ -56,7 +56,7 @@ _install_go(){
 }
 
 _install_tools(){
-  pip3 install dnsgen
+  pip3 install dnsgen &> /dev/null
   echo -e "+ dnsgen installed."${NC}
   pip3 install py-altdns==1.0.2
   echo -e "+ altdns installed."${NC}
