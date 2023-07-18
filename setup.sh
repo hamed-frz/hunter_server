@@ -141,7 +141,7 @@ EOF
 _get_ssl(){
   #configuration nginx
   #echo "* Get ssl for Domains"
-
+  mkdir -p {nginx/letsencrypt/root/,nginx/letsencrypt/bxx/,nginx/letsencrypt/ssrf/}
   apt install curl socat -y &> /dev/null
   curl https://get.acme.sh | sh &> /dev/null
   #ssl for root Domain
