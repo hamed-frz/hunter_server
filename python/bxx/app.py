@@ -17,7 +17,7 @@ def send_request():
     req_msg_param_value = 'null' if request.form.get('msg') == None else str(request.form.get('msg'))
     origin_of_req = 'null' if request.environ.get('HTTP_ORIGIN', 'default value') == None else str(request.environ.get('HTTP_ORIGIN', 'default value'))
     # Send HTTP parts to Discord webhook
-    webhook_url = "https://discord.com/api/webhooks/1104721845904756838/J-jpt0W_i4vTFxdyWLMd4aYA9XcSnwGKpxTR_6W-lRECWOpthfTxqhUF8VLJ19_nsm3z"
+    webhook_url = "__BXX_DISCORD__"
     webhook_data = {}
 
     message_embeds = [{ "description":f"Request send from:\n Origin: {origin_of_req}\n\n \
