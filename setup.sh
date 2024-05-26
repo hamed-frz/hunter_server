@@ -182,7 +182,7 @@ _nginx_config(){
   sed -i "s/__DOMAIN__/${__DOMAIN__}/g" nginx/nginx.conf
   sed -i "s/__DOMAIN__/${__DOMAIN__}/g" nginx/html/BXX/index.html
 
-  docker-compose up -d
+  docker compose up -d
 
   echo -e "+ Nginx and APIs is already installed. now this domains should be available.\n"${NC}
   echo -e "${RED}*** https://${__DOMAIN__} ***"${NC}
