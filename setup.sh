@@ -35,7 +35,7 @@ _install_packages(){
     sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
   sudo apt update &> /dev/null
-  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose -y &> /dev/null
+  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y &> /dev/null
 
   echo -e "${GREEN}+ packages installing is finished."${NC}
 }
@@ -46,8 +46,8 @@ _install_go(){
   mkdir tools
   cd tools
 
-  wget https://go.dev/dl/go1.20.4.linux-amd64.tar.gz  &> /dev/null
-  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz 
+  wget https://go.dev/dl/go1.22.3.linux-amd64.tar.gz  &> /dev/null
+  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.22.3.linux-amd64.tar.gz 
 
   echo "export PATH=\$PATH:/usr/local/go/bin" >> /root/.bashrc
   echo "export PATH=\$PATH:/root/go/bin/" >> /root/.bashrc
